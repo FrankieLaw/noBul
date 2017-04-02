@@ -1,0 +1,308 @@
+
+/* =============================
+	NOTE: BREAKPOINTS;
+============================= 
+ 320 x 480
+ 720 x 480
+ 1024 x 768
+
+ container
+ 	content
+ 		layout
+ 			section
+*/
+
+/* =============================
+	CSS DEBUG
+============================= */
+:root {
+	--debug-background-color1:none;
+	--debug-background-color2:#FFFFCC;
+
+	--desktop-width:1140px;
+	--full-width:100%;
+}
+
+
+/* =============================
+	CSS Resets
+============================= */
+html, title, body, h1, h2, h3, h4, h5, h6, p, br, hr, acronym, 
+abbr, address, b, bdi, bdo, big, blockquote, cite, code, del, 
+dfn, em, i, ins, kbd, mark, meter, pre, progress, q, rp, rt, 
+s, samp, small, strike, strong, sub, time, tt, u, var, wbr, form, input, 
+textarea, button, select, optgroup, option, label, fieldset, legend, 
+datalist, keygen, output, frame, frameset, noframes, iframe, img, map, 
+area, canvas, figcaption, figure, picture, audio, source, track, video, 
+a, link, nav, ul, ol, li, dir, dl, dt, dd, menu, table, caption, 
+th, tr, td, thead, tbody, tfoot, col, colgroup, style, div, span, header, 
+footer, main, section, article, aside, details, dialog, summary, data, head, 
+meta, base, basefont, script, noscript, applet, embed, object, param {
+	margin:0px;
+	padding:0px;
+}
+
+html, body {
+	width:100%;
+	height:100%;
+}
+
+a { 
+	text-decoration:none;
+	color:#777777;
+}
+
+a:hover { text-decoration: underline; }
+
+h3 {
+	font-size:1.0em;
+	font-weight:300;
+	margin-bottom:12px;
+	margin-top:12px;
+}
+
+
+/* =============================
+	NORMAL CONTAINERS
+============================= */
+.container {
+	width: var( --desktop-width );
+	margin:0px auto;
+	padding:10px 0px;
+	clear:both;
+}
+
+
+/* Mistake here, that I incorporate background image into a template */
+.container-full {
+	width: var( --full-width );
+	height:370px;
+
+	background-image:url("../images/blackfly-banner.jpg");
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+}
+
+.content {
+	width:100%;
+	margin:4px 0px 0px 0px;
+}
+
+.section-1 {
+	width:55%;
+	padding:0px 10px 25px 50px;
+	float:left;
+}
+
+.section-2 {
+	width:30%;
+	padding-top:30px;
+	padding-left:20px;
+
+	float:left;
+}
+
+.section-3 {
+	width:100%;
+	padding:20px 10px 50px 50px;
+}
+
+.grid-3 {
+	width:25%;
+	float:left;
+	text-align:center;
+	position:relative;
+}
+
+.grid-5 {
+	width:20%;
+	float:left;
+	text-align:center;
+	position:relative;
+
+	padding-top:20px;
+	box-sizing:border-box;
+}
+
+.absolute { position:absolute; }
+.relative { position:relative; }
+
+.statistics-med {
+	font-size:3.2em;
+	top:31%;
+	left:33%;
+}
+
+.statistics-sm {
+	font-size:2.0em;
+	top:37%;
+	left:31%;
+}
+
+.gap-xs { height:10px; }
+.gap-sm { height:20px; }
+
+
+.margin-gap-sm { margin-bottom:20px; }
+
+.border-bottom { border-bottom: 1px solid #BBB; }
+
+.lineGap-1 { line-height:1.3em; }
+
+/* =============================
+	FLEXBOX
+============================= */
+.flex-container-full {
+	display:flex;
+	width: var( --full-width );
+	height:370px;
+
+	background-image:url("../images/blackfly-banner.jpg");
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+}
+
+.flex-container {
+	width: var( --desktop-width );
+	margin:auto;
+}
+
+/* Mistake, mixing specific detail in generic classes */
+.flex-full {
+	display:flex;
+	width: var( --ful-width );
+	height:150px;
+
+	text-align:center;
+	background-color:#94C33E;
+}
+
+/* =============================
+	GENERIC CLASSES
+============================= */
+body {
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+	color:#777777;
+}
+
+.right-block-align { float:right; }
+
+.right-text-align 	{ text-align:right; }
+.align-middle 		{ text-align:center; }
+.align-left 		{ text-align:left; }
+
+.font-size-sm	{ font-size:0.9em; }
+.font-size-0 	{ font-size:1.0em; }
+.font-size-1 	{ font-size:1.1em; }
+.font-size-2 	{ font-size:1.3em; }
+.font-size-3 	{ font-size:1.5em; }
+.font-size-4 	{ font-size:1.7em; }
+.font-size-5 	{ font-size:2.0em; }
+
+.icon { vertical-align: text-bottom; }
+
+.icon-size-sm	{ font-size:12px; }
+.icon-size-md	{ font-size:24px; }
+.icon-size-lg	{ font-size:36px; }
+.icon-size-xl	{ font-size:48px; }
+
+.icon-blue { color:#0083C7; }
+
+.font-light 	{ font-weight:300; }
+
+.color-dark 	{ color:black; }
+.color-grey-1 	{ color:#777777; }
+
+.bkColor-blue	{ background-color:#4190e1; }
+.bkColor-red	{ background-color:#e64f25; }
+.bkColor-orange	{ background-color:#f19220; }
+.bkColor-off 	{ background-color:#cacaca; }
+
+.space-out-1 { letter-spacing:1px; }
+
+.padding-lv1 { padding:5px; }
+.padding-lv2 { padding:10px; }
+
+/* =============================
+	SITE SPECIFIC CLASSES
+============================= */
+.phone-number {
+	margin-top:10px;
+}
+
+.nav a {
+	margin-left:12px;
+	text-decoration:none;
+	color:#777777;
+}
+
+.nav a:hover {
+	text-decoration: underline;
+}
+
+.company-service {
+	float:left;
+	padding:10px;
+	margin:0px 5px;
+
+	width:14.0%;
+	text-align:center;
+
+	color:white;
+	font-size:0.9em;
+}
+
+.section-title {
+	padding-top:30px;
+	padding-bottom:0px;
+}
+
+.section-1 p {
+	margin-bottom:20px;
+}
+
+.section-2 img {
+	width:50px;
+	vertical-align:top;
+	margin-right:25px;
+}
+
+.section-3 p {
+	font-size:20px;
+}
+
+.flex-layout {
+	display:flex;
+	margin-bottom:30px;
+	color:#666666;
+	font-weight:700;
+	line-height:1.3em;
+}
+
+.sampleImage {
+	width: var(--desktop-width);
+}
+
+.white {
+	color:white;
+}
+
+.pink {
+	background-color:#EC297B;
+	padding:5px 10px;
+}
+
+.jessica {
+	height:150px;
+	position:absolute;
+	top:-58px;
+	right:0px;
+}
+
+.themeGray {
+	background-color:#3f3f3f;
+}
+
+.address {
+	color:#777777;
+}
